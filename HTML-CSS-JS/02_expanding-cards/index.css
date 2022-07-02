@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+}
+.container{
+  width: 90vw;
+  display: flex;
+}
+.panel{
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 0.5;
+  margin-right: 20px;
+  height: 90vh;
+  color: #fff;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+.panel h3{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
+  opacity: 0;
+}
+.panel.active{
+ flex: 5;
+}
+.panel.active h3{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+/* 媒体查询 适配移动端 */
+@media (max-width:480px){
+  .container{
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5){
+    display: none;
+  }
+}
