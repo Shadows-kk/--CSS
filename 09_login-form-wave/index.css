@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+:root{
+  --border-fill-color: #4388ea;
+  --border-empty-color: #e0e0e0;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  background-color: steelblue;
+
+}
+.container{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+}
+.title{
+  display: flex;
+  justify-content: center;
+}
+h3{
+  color: #fff;
+}
+.formWrapper{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+input:focus{
+  outline: none;
+  color: #a3d3e2;
+  border-bottom: 2px solid #a3d3e2;
+}
+
+input:focus + label span{
+  color: lightblue;
+  transform: translateY(-30px);
+}
+.username, .password{
+  color: #fff;
+  position: relative;
+}
+label{
+  position: absolute;
+  left: 0;
+}
+label span{
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+button{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #a3d3e2;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+.form-item{
+  margin: 20px 0 40px;
+
+}
+.text{
+  color: #fff;
+  font-size: 14px;
+
+  display: flex;
+  justify-content: center;
+}
+.text p:nth-of-type(2){
+  color: #a3d3e2;
+  margin-left: 10px;
+  cursor: pointer;
+}
